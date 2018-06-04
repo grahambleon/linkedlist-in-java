@@ -18,16 +18,24 @@ public class Runner {
     //output "The Orange Furry Cat"  
     Node furryNode = new Node("Furry");
     sentence.insertAfter(orangeNode, furryNode);
+//    sentence.appendNode(new Node("I'm"));
     System.out.println(sentence.toString());
     
-    //output "The Orange Furry Dog"
     sentence.deleteNode(catNode);
-    sentence.appendNode(new Node("Dog"));
+    sentence.appendNode(new Node("Kitten"));
     System.out.println(sentence.toString());
     
+    System.out.println(sentence.length());
     
-    //output "An Orange Furry Dog"
-    sentence.deleteNode(theNode);
-    sentence.pushNode(new Node("An"));
+//    //output "The Orange Furry Dog"
+//    sentence.deleteNode(catNode);
+//    sentence.appendNode(new Node("Dog"));
+//    System.out.println(sentence.toString());
+//    
+//    
+//    //output "An Orange Furry Dog"
+//    sentence.deleteNode(theNode);
+//    sentence.pushNode(new Node("An"));
+//    System.out.println(sentence.toString());
   }
 }

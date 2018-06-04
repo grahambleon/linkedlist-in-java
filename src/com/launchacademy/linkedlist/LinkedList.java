@@ -1,7 +1,7 @@
 package com.launchacademy.linkedlist;
 
 public class LinkedList {
-  @SuppressWarnings("unused")
+
   private Node head;
 
   LinkedList(Node head) {
@@ -19,7 +19,15 @@ public class LinkedList {
   }
   
   public void appendNode(Node nodeToAppend) {
-    head.next = nodeToAppend;
+	Node node = head;
+    while(node != null) {
+	  if (node.next == null) {
+	    node.next = nodeToAppend;
+	    break;
+	  } else {
+	    node = node.next;
+	  }
+    }
   }
   
   public void insertAfter(Node prevNode, Node newNode) {
@@ -31,7 +39,6 @@ public class LinkedList {
 	Node node = head;
     while(node != null) {
 	  if (node.next == nodeToDelete) {
-	    nodeToDelete = node.next;
 	    node.next = nodeToDelete.next;
 	    nodeToDelete.next = null;
 	  } else {
