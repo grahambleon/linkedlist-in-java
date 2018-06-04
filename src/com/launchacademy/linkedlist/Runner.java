@@ -22,10 +22,12 @@ public class Runner {
     System.out.println(sentence.toString());
     
     sentence.deleteNode(catNode);
+    sentence.deleteNode(furryNode);
     sentence.appendNode(new Node("Kitten"));
     System.out.println(sentence.toString());
     
     System.out.println(sentence.length());
+
     
 //    //output "The Orange Furry Dog"
 //    sentence.deleteNode(catNode);

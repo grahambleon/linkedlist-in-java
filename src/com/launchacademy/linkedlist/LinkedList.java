@@ -38,15 +38,15 @@ public class LinkedList {
   public Node deleteNode(Node nodeToDelete) {
 	Node node = head;
     while(node != null) {
-	  if (node.next == nodeToDelete) {
+      if (head == nodeToDelete) {
+        this.head = head.next;
+      } else if (node.next == nodeToDelete) {
 	    node.next = nodeToDelete.next;
 	    nodeToDelete.next = null;
 	  } else {
 	   	node = node.next;
 	  }
     }
-    //Note: be sure to handle what happens if we delete the head
-    //I'm pretty sure this covers that requirement but I need to double check.
 	return nodeToDelete;
   }
   
