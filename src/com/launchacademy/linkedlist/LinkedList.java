@@ -51,8 +51,8 @@ public class LinkedList {
   }
   
   public void pushNode(Node nodeToPush) {
-	  nodeToPush.next = head;
-	  this.head = nodeToPush;
+	nodeToPush.next = head;
+    this.head = nodeToPush;
   }
   
   public int length() {
@@ -65,12 +65,4 @@ public class LinkedList {
     return length;
   }
   
-  //Extra credit:
-  public void deleteWordsStartingWith(char letter) {
-    //eliminate all words starting with the specified letter
-  }
-  
-  public void makeUnique() {
-    //eliminate all duplicate words in the list
-  }
 }
